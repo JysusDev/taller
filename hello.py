@@ -1,7 +1,10 @@
 def suma(num1, num2){
     return num1 + num2
 }
-    
+
+resultado = suma(3,5)
 
 
-print ("Hello World!")
+print (resultado)
+
+print("Hola","Soy","Jesus", sep="*", end=" Sds")
