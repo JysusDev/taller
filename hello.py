@@ -27,3 +27,12 @@ print(
     -El segundo nos dice donde detener la secuencia (Queda excluido)
     -El tercero nos indica el paso
 """)
+
+print("""
+& (ampersand) ‒ conjunción a nivel de bits;
+| (barra vertical) - disyunción a nivel de bits;
+~ (tilde) - negación a nivel de bits;
+^ (signo de intercalación) - o exclusivo a nivel de bits (xor).
+""")
+#Estos no pueden ser de tipo FLOAT
+

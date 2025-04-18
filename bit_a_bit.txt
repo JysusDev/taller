@@ -1,0 +1,184 @@
+Resumen de Operadores Bit a Bit en Python
+Los operadores bit a bit manipulan números a nivel de bits (binario). Son útiles en programación de bajo nivel, optimización, criptografía y manejo de flags. Los operadores en Python son:
+
+AND (&): Compara bits y devuelve 1 si ambos son 1.
+
+OR (|): Devuelve 1 si al menos un bit es 1.
+
+XOR (^): Devuelve 1 si los bits son diferentes.
+
+NOT (~): Invierte los bits (complemento a uno).
+
+Desplazamiento a la izquierda (<<): Desplaza bits a la izquierda, multiplicando por 
+2
+n
+2 
+n
+ .
+
+Desplazamiento a la derecha (>>): Desplaza bits a la derecha, dividiendo por 
+2
+n
+2 
+n
+ .
+
+Explicación en Profundidad
+1. Operador AND (&)
+Compara cada bit de dos números y devuelve 1 solo si ambos bits son 1.
+
+Ejemplo:
+
+python
+a = 5    # Binario: 0101  
+b = 3    # Binario: 0011  
+result = a & b  # 0101 & 0011 = 0001 (1 en decimal)  
+print(result)   # Output: 1  
+Tabla de Verdad:
+
+Bit A	Bit B	A & B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+Uso común:
+
+Enmascarar bits (extraer bits específicos).
+
+Verificar si un bit está activado.
+
+2. Operador OR (|)
+Devuelve 1 si al menos uno de los bits comparados es 1.
+
+Ejemplo:
+
+python
+a = 5    # 0101  
+b = 3    # 0011  
+result = a | b  # 0101 | 0011 = 0111 (7 en decimal)  
+print(result)   # Output: 7  
+Tabla de Verdad:
+
+Bit A	Bit B	A | B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+Uso común:
+
+Activar bits específicos en un número.
+
+3. Operador XOR (^)
+Devuelve 1 si los bits comparados son diferentes.
+
+Ejemplo:
+
+python
+a = 5    # 0101  
+b = 3    # 0011  
+result = a ^ b  # 0101 ^ 0011 = 0110 (6 en decimal)  
+print(result)   # Output: 6  
+Tabla de Verdad:
+
+Bit A	Bit B	A ^ B
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+Uso común:
+
+Alternar bits (encender/apagar).
+
+Cifrado básico.
+
+4. Operador NOT (~)
+Invierte todos los bits del número (complemento a uno). En Python, los enteros son de signo, por lo que el resultado es -x - 1.
+
+Ejemplo:
+
+python
+a = 5    # 0101  
+result = ~a  # ~0101 = 1010 (pero en complemento a 2 es -6)  
+print(result)   # Output: -6  
+Explicación:
+
+~5 = -(5 + 1) = -6 (por el complemento a dos).
+
+5. Desplazamiento a la Izquierda (<<)
+Desplaza los bits hacia la izquierda, rellenando con ceros. Equivale a multiplicar por 
+2
+n
+2 
+n
+ .
+
+Ejemplo:
+
+python
+a = 5    # 0101  
+result = a << 2  # 010100 (20 en decimal)  
+print(result)   # Output: 20  
+Fórmula:
+
+a
+<
+<
+n
+=
+a
+×
+2
+n
+a<<n=a×2 
+n
+ 
+6. Desplazamiento a la Derecha (>>)
+Desplaza los bits hacia la derecha, rellenando con ceros (para positivos). Equivale a dividir por 
+2
+n
+2 
+n
+  (división entera).
+
+Ejemplo:
+
+python
+a = 20   # 10100  
+result = a >> 2  # 00101 (5 en decimal)  
+print(result)   # Output: 5  
+Fórmula:
+
+a
+>
+>
+n
+=
+⌊
+a
+2
+n
+⌋
+a>>n=⌊ 
+2 
+n
+ 
+a
+​
+ ⌋
+Casos de Uso Avanzados
+Manipulación de Flags:
+
+python
+PERMISO_LECTURA = 0b001  # 1  
+PERMISO_ESCRITURA = 0b010  # 2  
+PERMISO_EJECUCION = 0b100  # 4  
+
+permisos = PERMISO_LECTURA | PERMISO_ESCRITURA  # 0b011 (3)  
+if permisos & PERMISO_LECTURA:  
+    print("Lectura permitida")  
+Optimización de Operaciones Matemáticas:
+Usar << 1 en lugar de * 2 o >> 1 en lugar de // 2 (más rápido en bajo nivel).
+
+Criptografía:
+Algoritmos como AES usan operaciones bit a bit para mezclar datos.
+
