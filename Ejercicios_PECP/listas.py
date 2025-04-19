@@ -29,3 +29,21 @@ list.insert(0, 100)
 
 #una forma de intercambiar posiciones
 #my_list[0], my_list[4] = my_list[4], my_list[0]
+
+"""
+Para copiar los elementos de una lista en
+una nueva es necesario usar la siguiente
+sintaxis
+
+list2 = list[:] para la lista completa
+[inicio:fin-1] para solo una parte
+esto tambien lo podemos usar con del
+del list[1:3]
+"""
+
+"""
+in y not in
+devuelven valores booleanos, los podemos usar
+para saber si hay un elemento que nosotros 
+especifiquemos en una lista
+"""
