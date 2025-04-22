@@ -36,3 +36,8 @@ print("""
 """)
 #Estos no pueden ser de tipo FLOAT
 
+"""
+Se pueden pasar argumentos a una funcion de forma posicional o con palabras claves
+
+"""
+# def sum (num1 = 4, num2 = 3)
