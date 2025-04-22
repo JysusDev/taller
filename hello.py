@@ -39,5 +39,6 @@ print("""
 """
 Se pueden pasar argumentos a una funcion de forma posicional o con palabras claves
 
+Es importante poner primero los posicionales y despues los de palabra clave, sino se generara un error
 """
 # def sum (num1 = 4, num2 = 3)
